@@ -10,9 +10,10 @@ class TodoList extends Component {
   }
   render() {
     const todos = this.props.todos.map((todo) => {
+          console.log(todo);
       return (<TodoItem actions={this.props.actions} key={todo.UserID} {...todo} />);
     });
-    
+
     return (
       <div className="row">
         <div className="col-sm-10 col-sm-offset-1">

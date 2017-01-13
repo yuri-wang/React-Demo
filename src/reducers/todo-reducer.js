@@ -10,7 +10,8 @@ let todoReducer = function(todos = [], action) {
       return [{
         Nickname: action.Nickname,
         completed: false,
-        id: generateNextId(todos)
+        id: generateNextId(todos),
+        UserID: action.UserID
       }, ...todos]
     case 'TOGGLE_TODO':
       return todos.map((todo) => {
